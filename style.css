@@ -1,0 +1,172 @@
+/* 極簡棕色調風格 */
+:root {
+  --bg-color: #f7f4ef;
+  --card-bg: #ffffff;
+  --primary: #735d52;
+  --text-dark: #4a423d;
+  --border-color: #e8ded5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 16px;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
+}
+
+.invitation-card {
+  max-width: 440px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 36px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin: 12px 0 4px 0;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  color: #a48978;
+  margin: 0;
+}
+
+.date {
+  font-size: 1.05rem;
+  color: var(--primary);
+  margin-top: 4px;
+  letter-spacing: 1px;
+}
+
+/* 拍立得主圖樣式 */
+.polaroid-frame {
+  background: #ffffff;
+  padding: 12px 12px 24px 12px;
+  margin: 24px auto 10px auto;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+  max-width: 320px;
+}
+
+.polaroid-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* 橫向輪播相簿樣式 */
+.album-hint {
+  font-size: 0.8rem;
+  color: #a48978;
+  margin-top: -8px;
+  margin-bottom: 12px;
+}
+
+.album-carousel {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 8px 4px 16px 4px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+
+.album-carousel::-webkit-scrollbar {
+  height: 4px;
+}
+
+.album-carousel::-webkit-scrollbar-thumb {
+  background: #d8be91;
+  border-radius: 4px;
+}
+
+.album-carousel img {
+  flex: 0 0 82%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  scroll-snap-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.section {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+}
+
+.section h2 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.time, .location, .address {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+/* 地圖容器 */
+.map-container {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* 按鈕樣式 */
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+@media (max-width: 380px) {
+  .invitation-card {
+    padding: 32px 18px;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+}
+
+.wedding-audio {
+  display: block;
+  width: 100%;
+}

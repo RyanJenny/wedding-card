@@ -1,7 +1,7 @@
 /* 極簡棕色調風格 */
 :root {
-  --bg-color: #f7f4ef;
-  --card-bg: #ffffff;
+  --bg-color: #CBAFA3;
+  --card-bg: #CBAFA3;
   --primary: #735d52;
   --text-dark: #4a423d;
   --border-color: #e8ded5;
@@ -24,48 +24,16 @@ body {
   margin: 0 auto;
   background: var(--card-bg);
   border-radius: 16px;
-  padding: 36px 24px;
+  padding-bottom: 36px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   text-align: center;
+  overflow: hidden;
 }
 
-.hero h1 {
-  font-size: 2.2rem;
-  color: var(--primary);
-  margin: 12px 0 4px 0;
-  letter-spacing: 2px;
-}
-
-.subtitle {
-  font-size: 0.8rem;
-  letter-spacing: 3px;
-  color: #a48978;
-  margin: 0;
-}
-
-.date {
-  font-size: 1.05rem;
-  color: var(--primary);
-  margin-top: 4px;
-  letter-spacing: 1px;
-}
-
-/* 拍立得主圖樣式 */
-.polaroid-frame {
-  background: #ffffff;
-  padding: 12px 12px 24px 12px;
-  margin: 24px auto 10px auto;
-  border-radius: 6px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  border: 1px solid var(--border-color);
-  max-width: 320px;
-}
-
-.polaroid-frame img {
+.hero-img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 4px;
 }
 
 /* 橫向輪播相簿樣式 */
@@ -108,8 +76,7 @@ body {
 
 .section {
   margin-top: 32px;
-  padding-top: 24px;
-  border-top: 1px solid var(--border-color);
+  padding: 24px 24px 0;
 }
 
 .section h2 {
@@ -158,11 +125,12 @@ body {
 
 @media (max-width: 380px) {
   .invitation-card {
-    padding: 32px 18px;
+    padding-bottom: 32px;
   }
 
-  .hero h1 {
-    font-size: 1.9rem;
+  .section {
+    padding-right: 18px;
+    padding-left: 18px;
   }
 }
 
